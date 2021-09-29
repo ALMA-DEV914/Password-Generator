@@ -27,12 +27,11 @@ function writePassword() {
      var promptConfirm = window.prompt("Choose: 'lowerCase', 'upperCase', 'number', 'specialCharacter'.");
 
   } else {
-    generatePassword();
+    password();
   }
    var passwordLength = window.prompt("The password length should be minimum of 8 character and not more than 128 character");
-   
+
   var promptConfirm = window.prompt("Please key in your password");
-  console.log(writePassword);
    var password = generatePassword();
   
   function generatePassword() {
