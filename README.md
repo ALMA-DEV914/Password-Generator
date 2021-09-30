@@ -1,6 +1,6 @@
 # Password Generator Starter Code
 
-## My Tasks on this Assignment
+## My Tasks On This Assignment
 * I need to create a new password generator that will input a secure password
 * I need to set a series of prompts for password criteria
 and create input that user can select which criteria to include in the password
