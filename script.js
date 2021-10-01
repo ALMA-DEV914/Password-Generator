@@ -12,9 +12,11 @@ var symbolsChar = ["!","#","$","%","&","(",")","*","+",",","-",".","/",";","<","
 var numbersChar = ["1","2","3","4","5","6","7","8","9","0"];
 // create randomNumber() function for the length of the password
 var randomNumber = function () {
-  var item = requiredLength[Math.floor(Math.random() *  requiredLength.length)];
+  var item = requiredLength[Math.floor(Math.random() *  requiredLength.length)]
+  ;
   return item;
 };
+console.log(randomNumber());
 // create passwordLength() function and conditional statements for the password requirements
 var passwordLength = function(){
   // prompt input for the length value
@@ -82,10 +84,12 @@ var length = passwordLength();
   numberChar();
   // console log the input length 
   console.log(requiredLength);
+  console.log(length);
   var password = "";
   // create a for loops for the password
   for (let i = 0; i < length; i++) {
     password += randomNumber();
+    console.log(password);
   }
   // return the generated password
   return password;
@@ -95,11 +99,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  // alert user to enter password
-  window.alert("Please enter your new password");
   requiredLength = [];
   var password = generatePassword();
-
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
