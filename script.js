@@ -12,9 +12,12 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
     window.alert("Please generate your new password");
     window.alert("Your password should contain one of these criterias: 'lower case', 'upper case', 'number', and 'special character'.");
+  var promptCriteria = window.prompt("Choose which criteria you want to include: 'lower case', upper case',' number', or 'special charcter'.");
 
-    var promptConfirm = "";
+  var promptConfirm = "";
   if (promptConfirm === "") {
+    var passwordLength = window.prompt("Choose the length of your password between 8 to 128 characters");
+
       var promptConfirm = window.prompt("Would you like to add lower case in your password?");
     
      var promptConfirm = window.prompt("Would you like to add upper case in your password?");
@@ -23,9 +26,7 @@ function writePassword() {
     
       var promptConfirmn = window.prompt(" Would you like to add special character in your password?");
   
-      var passwordLength = window.prompt("Choose the length of your password between 8 to 128 characters");
-      
-  var printPassword = window.prompt("Please key in your password.");
+      var printPassword = window.prompt("Please key in your password.");
   } else {
     writePassword();
   }
