@@ -1,56 +1,46 @@
 // Assignment code here
 var password = "";
-var passwordLength = "";
-var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghjiklmnopqrstuvwxyz0123456789@#$%&*";
+var charset = 
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghjiklmnopqrstuvwxyz0123456789@#$%&*";
 
- 
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+
 // Write password to the #password input
 function writePassword() {
-    // alert the user to enter their password
-  window.alert("Please generate your new password.");
-  window.alert("Password should contain at least one of these criterias: upperCase, lowerCase, number and at least one special character.")
+    window.alert("Please generate your new password");
+    window.alert("Your password should contain one of these criterias: 'lower case', 'upper case', 'number', and 'special character'.");
 
-var promptConfirm = "";
-
-  if (promptConfirm === ""){
-    window.prompt("Would you like to add lowercase?");
-  
-    window.prompt("Would you like to add uppercase?");
-  
-    window.prompt("Would you like to add number?")
-  
-    window.prompt("Would you like to add a specialCharacter?");
-
-
-  var promptPasswordLength =  window.prompt("Choose the length of your password between 8 and 128 characters.");
+    var promptConfirm = "";
+  if (promptConfirm === "") {
+      var promptConfirm = window.prompt("Would you like to add lower case in your password?");
     
-} else if (function passwordLength(min, max) {
-      let passwordLength = 8 + "";
-      if (passwordLength === 8 >= 128 ){
-         return passwordLength();
-      }
-});
-   else{
-    generatePassword();
+     var promptConfirm = window.prompt("Would you like to add upper case in your password?");
+    
+      var promptConfirmn = window.prompt("Would you like to add number in your password?");
+    
+      var promptConfirmn = window.prompt(" Would you like to add special character in your password?");
+  
+      var passwordLength = window.prompt("Choose the length of your password between 8 to 128 characters");
+      
+  var printPassword = window.prompt("Please key in your password.");
+  } else {
+    writePassword();
   }
-
-  var promptPassword = window.prompt("Please key in your password");
-  
- var password = generatePassword();
-  
-function generatePassword() {
+ 
+  var password = generatePassword();
+    
+  function generatePassword(){
     var password = "";
-    var passwordLength = 24;
     var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghjiklmnopqrstuvwxyz0123456789@#$%&*";
-for ( var i = 8; i < passwordLength; i++) {
-  var randomPassword = Math.floor(Math.random() * charset.length);
-  password += charset.substring(randomPassword,randomPassword + 1);
- }
-
-var passwordText = document.querySelector("#password");
+    for ( var i = 0; i < passwordLength; i++) {
+     var randomPassword = Math.floor(Math.random() * charset.length);
+     password += charset.substring(randomPassword, randomPassword + 1);
+    }
+ 
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
   }
