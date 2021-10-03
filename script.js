@@ -21,8 +21,9 @@ console.log(randomNumber());
 var passwordLength = function(){
   // prompt input for the length value
   var length = window.prompt("Choose password length between 8 to 128 characters. Enter the number.");
+
   // if length is less than 8 characters alert the user for the minimum length
-  if (length < 8 ){
+ if (length < 8 ){
     window.alert("Password length should have a minimum of 8 characters");
      passwordLength();
   }
@@ -44,7 +45,7 @@ var upperCase = function(){
     if(upperConfirm) {
       requiredLength = requiredLength.concat(upperCaseChar);
     }
-};
+  };
 // create lowerCase() function
 var lowerCase = function() {
   // confirm user if they want to add lower case in their pssword
@@ -72,8 +73,13 @@ var numberChar = function(){
   if (numberConfirm) {
     // add number
     requiredLength = requiredLength.concat(numbersChar);
+  } else {
+    window.alert("You should choose at least one character from the criterias");
+    return lowerCase(), upperCase(), symbolChar(), numberChar();
+    
   }
 };
+
 // create the generatePassword() function
 var generatePassword = function(){
   // add all created functions with conditinal statements
@@ -94,6 +100,7 @@ var length = passwordLength();
   // return the generated password
   return password;
 };
+
 //Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -103,8 +110,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-}
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
