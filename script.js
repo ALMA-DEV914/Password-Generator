@@ -16,7 +16,7 @@ var randomNumber = function () {
   ;
   return item;
 };
-console.log(randomNumber());
+
 // create passwordLength() function and conditional statements for the password requirements
 var passwordLength = function(){
   // prompt input for the length value
