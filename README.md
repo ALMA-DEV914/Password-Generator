@@ -19,10 +19,14 @@ and confirm the user which criteria to include in the password. So I create prom
 * When the user answered all prompts and selected characters to include in the their password, then the password should be created with their chosen length and characters. So, I created a function that will return their input and confirms.
 
 * When the password is generated, then it should be displayed in an alert or written to the page password input. So, I add all the function that I've created inside the generatePassword() function to be executed.
+<img width="1792" alt="Screen Shot 2021-10-04 at 9 05 49 AM" src="https://user-images.githubusercontent.com/65073138/135891367-d270810a-ab27-4289-b41d-05643ce09efe.png">
 
 ### The Deployed Application link
 https://alma-dev914.github.io/Password-Generator/
 
 #### The Application Snapshot
 
+
+<img width="1792" alt="Screen Shot 2021-10-04 at 9 16 04 AM" src="https://user-images.githubusercontent.com/65073138/135891354-bee74949-ad65-45b4-932b-c755ceab249a.png">
+<img width="1792" alt="Screen Shot 2021-10-04 at 9 05 49 AM" src="https://user-images.githubusercontent.com/65073138/135891390-65dea892-506f-4abe-941c-14c37fba9bc9.png">
 
