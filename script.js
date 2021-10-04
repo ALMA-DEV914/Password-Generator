@@ -52,7 +52,6 @@ var lowerCase = function() {
   var lowerConfirm = window.confirm("Would you like to include lower case characters?");
   // if confirm, add lower case to the required length
   if(lowerConfirm){
-    // add lowercase
      requiredLength = requiredLength.concat(lowerCaseChar) ;
   }
 };
@@ -69,10 +68,11 @@ var symbolChar = function() {
 var numberChar = function(){
   // confirm user if they to add numbers in their password
   var numberConfirm = window.confirm("Would you like to include numbers?");
-  // if confirm. add numbers to the required length
+  // if confirm add numbers to the required length
   if (numberConfirm) {
     // add number
     requiredLength = requiredLength.concat(numbersChar);
+    // if user didn't confirm a single character criteria alert them to choose by returning the confirm functions
   } else {
     window.alert("You should choose at least one character from the criterias");
     return lowerCase(), upperCase(), symbolChar(), numberChar();
